@@ -1,0 +1,19 @@
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply m-0 min-w-[320px] bg-slate-50 font-sans text-slate-900 antialiased;
+  }
+
+  input,
+  select,
+  button {
+    font: inherit;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}

@@ -1,0 +1,202 @@
+@layer components {
+  .portal-page {
+    @apply min-h-screen p-3 sm:p-6 lg:p-10;
+    background: linear-gradient(135deg, #f5f3ff, #f8fafc 55%, #eef2ff);
+  }
+
+  .portal-layout {
+    @apply mx-auto grid min-h-[calc(100vh-24px)] max-w-7xl overflow-hidden rounded-3xl bg-white shadow-2xl shadow-violet-100;
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+
+  .portal-intro {
+    @apply relative flex flex-col justify-between overflow-hidden bg-indigo-950 p-8 text-white sm:p-10 lg:p-12;
+  }
+
+  .portal-intro::before {
+    content: "";
+    @apply pointer-events-none absolute -right-20 top-24 h-64 w-64 rounded-full bg-violet-500/20 blur-3xl;
+  }
+
+  .brand {
+    @apply relative z-10 flex items-center gap-3 text-xl font-bold text-white;
+  }
+
+  .brand-icon {
+    @apply flex h-11 w-11 items-center justify-center rounded-xl bg-violet-500 text-xl font-bold;
+  }
+
+  .intro-content {
+    @apply relative z-10 my-10;
+  }
+
+  .intro-badge {
+    @apply inline-block rounded-full border border-white/20 bg-white/10 px-3 py-2 text-[10px] font-bold tracking-widest text-violet-200;
+  }
+
+  .intro-content h1 {
+    @apply mt-6 text-4xl leading-tight font-bold tracking-tight xl:text-5xl;
+  }
+
+  .intro-content h1 span {
+    @apply text-violet-300;
+  }
+
+  .intro-description {
+    @apply mt-5 max-w-md text-sm leading-7 text-indigo-100/80;
+  }
+
+  .feature-list {
+    @apply mt-7 space-y-4;
+  }
+
+  .feature-list p {
+    @apply text-sm text-indigo-100;
+  }
+
+  .intro-footer {
+    @apply relative z-10 text-xs text-indigo-200/70;
+  }
+
+  .portal-form-section {
+    @apply flex min-w-0 items-center justify-center bg-white p-6 sm:p-8 lg:p-10 xl:p-12;
+  }
+
+  .registration-wrapper {
+    @apply relative w-full max-w-xl;
+  }
+
+  .registration-form {
+    @apply w-full space-y-6;
+  }
+
+  .form-heading {
+    @apply mb-7;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold tracking-widest text-violet-600;
+  }
+
+  .form-heading h2 {
+    @apply mt-3 text-3xl font-bold tracking-tight text-slate-900;
+  }
+
+  .form-heading > p:last-child {
+    @apply mt-3 text-sm leading-6 text-slate-500;
+  }
+
+  .form-grid {
+    @apply grid grid-cols-1 gap-x-4 gap-y-5 sm:grid-cols-2;
+  }
+
+  .full-width {
+    @apply sm:col-span-2;
+  }
+
+  .terms-row {
+    @apply flex items-start gap-3 text-sm leading-6 text-slate-600;
+  }
+
+  .terms-row input {
+    @apply mt-1 h-4 w-4 shrink-0 accent-violet-600;
+  }
+
+  .form-footer {
+    @apply text-center text-xs text-slate-400;
+  }
+
+  .notification {
+    @apply mb-6 flex items-start gap-3 rounded-xl border p-4 shadow-sm;
+  }
+
+  .notification-success {
+    @apply border-emerald-200 bg-emerald-50 text-emerald-800;
+  }
+
+  .notification-error {
+    @apply border-red-200 bg-red-50 text-red-800;
+  }
+
+  .notification-icon {
+    @apply flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white font-bold;
+  }
+
+  .notification-content {
+    @apply min-w-0 flex-1;
+  }
+
+  .notification-content strong {
+    @apply text-sm font-semibold;
+  }
+
+  .notification-content p {
+    @apply mt-1 break-words text-sm leading-5;
+  }
+
+  .notification-close {
+    @apply rounded-md px-2 text-xl leading-none opacity-60 hover:opacity-100;
+  }
+}
+
+@media (min-width: 1024px) {
+  .portal-layout {
+    min-height: 760px;
+  }
+}
+
+@media (max-width: 767px) {
+  .portal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-intro {
+    @apply p-6;
+  }
+
+  .intro-content {
+    @apply my-8;
+  }
+
+  .intro-content h1 {
+    @apply text-4xl;
+  }
+
+  .portal-form-section {
+    @apply px-5 py-8;
+  }
+}
+
+@layer components {
+  .notification {
+    @apply flex items-start justify-between gap-3 p-4 mb-5 border border-transparent rounded-xl text-sm;
+  }
+
+  .notification-content {
+    @apply flex-1;
+  }
+
+  .notification-content p {
+    @apply mt-1.5 leading-relaxed;
+  }
+
+  .notification-success {
+    @apply bg-green-100 border-green-300 text-green-800;
+  }
+
+  .notification-error {
+    @apply bg-red-100 border-red-300 text-red-800;
+  }
+
+  .notification-loading {
+    @apply bg-blue-100 border-blue-300 text-blue-800;
+  }
+
+  .notification-close {
+    @apply px-1 text-2xl leading-none cursor-pointer;
+  }
+
+  .validation-summary {
+    @apply p-3 mb-4 rounded-lg bg-orange-50 text-orange-800 text-sm;
+  }
+}
